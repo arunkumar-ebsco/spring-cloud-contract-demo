@@ -40,6 +40,5 @@ dependencyManagement {
 
 contracts {
     packageWithBaseClasses = 'com.ebsco.example'
-//	A hack to get around using rootDir in multi-project build
     contractsDslDir = file("${project.projectDir}/src/test/resources/contracts/")
 }
