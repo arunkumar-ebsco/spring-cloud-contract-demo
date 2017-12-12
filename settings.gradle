@@ -1,2 +1,3 @@
 include 'microservice-producer'
+include 'microservice-producer-with-restdocs'
 
