@@ -99,8 +99,8 @@ artifactory {
     publish {
         repository {
             repoKey = 'libs-snapshot-local'
-            username = "exdeveloperro"
-            password = "AKqXzHDHpIztnzb4"
+            username = project.artifactory_user
+            password = project.artifactory_password
             maven = true
 
         }
