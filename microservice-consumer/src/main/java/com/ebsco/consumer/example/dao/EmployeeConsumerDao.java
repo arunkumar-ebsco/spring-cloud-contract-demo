@@ -13,14 +13,14 @@ import java.net.URI;
  * Created by aganapathy on 12/12/17.
  */
 @Component
-public class EmployeeDao {
+public class EmployeeConsumerDao {
 
     private final RestTemplate restTemplate;
 
     @Value("${employeeProducer.url}")
     private final String employeeProducerUrl;
 
-    public EmployeeDao(RestTemplate restTemplate, @Value("${employeeProducer.url}") String employeeProducerUrl) {
+    public EmployeeConsumerDao(RestTemplate restTemplate, @Value("${employeeProducer.url}") String employeeProducerUrl) {
         this.restTemplate = restTemplate;
         this.employeeProducerUrl = employeeProducerUrl;
     }
