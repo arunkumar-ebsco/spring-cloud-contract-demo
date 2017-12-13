@@ -24,12 +24,13 @@ public class EmployeeConsumerServiceTest {
 
         //Given
         Response response = employeeService.getEmployeeDetails();
+        String expectedResponse = "Employee{name='ARUN', id=1}";
 
         // then:
         String message = response.getMessage();
 
         // and:
-        assert(message.contains("ARUN"));
+        assert(expectedResponse.equalsIgnoreCase(message));
     }
 
 
