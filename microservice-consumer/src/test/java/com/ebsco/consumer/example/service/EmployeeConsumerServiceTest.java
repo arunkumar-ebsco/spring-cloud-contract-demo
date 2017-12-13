@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = MicroServiceApplication.class)
-@AutoConfigureStubRunner(ids = "com.ebsco.producer.example:microservice-producer:+:stubs:8082", workOffline = true)
+@AutoConfigureStubRunner(ids = "com.ebsco.producer.example:microservice-producer:+:stubs:8082", workOffline = false)
 public class EmployeeConsumerServiceTest {
 
     @Autowired EmployeeConsumerService employeeService;
