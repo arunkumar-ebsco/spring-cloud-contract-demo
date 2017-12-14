@@ -1,7 +1,7 @@
 # spring-cloud-contract-demo
 Sample implementation of spring-cloud-contract
 
-#What you need
+# What you need
 
  Java
  Spring Boot (1.4.1.RELEASE)
@@ -10,7 +10,7 @@ Sample implementation of spring-cloud-contract
  Local Maven Repo
  Artifactory (in case you publish the stubs to remote location)
 
-#Step by Step Workflow
+# Step by Step Workflow
 
 1. Add a test: On the consumer side, we start by writing the functional test for the new feature, and implementing the gateway that communicates with the producer endpoint.
    (microservice-consumer/src/test/main/.../EmployeeConsumerServiceTest.java)
