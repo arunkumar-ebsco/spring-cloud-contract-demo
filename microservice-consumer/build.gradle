@@ -1,31 +1,19 @@
 buildscript {
     ext {
         springBootVersion = '1.5.8.RELEASE'
-        jfrogBuildInfoPluginVersion = '4.4.12'
     }
     repositories {
-        //mavenCentral()
-        maven {
-            url 'https://eis.jfrog.io/eis/plugins-release'
-            credentials {
-                username = "exdeveloperro"
-                password = "AKqXzHDHpIztnzb4"
-            }
-        }
+        mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:${jfrogBuildInfoPluginVersion}"
     }
-}
-
-plugins {
-    id "com.jfrog.artifactory" version "4.4.0"
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -33,13 +21,6 @@ targetCompatibility = 1.8
 repositories {
     mavenCentral()
     mavenLocal()
-    maven {
-        url 'https://eis.jfrog.io/eis/'
-        credentials {
-            username = "exdeveloperro"
-            password = "AKqXzHDHpIztnzb4"
-        }
-    }
 }
 
 
@@ -57,17 +38,5 @@ dependencyManagement {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '3.5'
-}
-
-artifactory {
-    contextUrl = "https://eis.jfrog.io/eis/"
-    resolve {
-        repository {
-            repoKey = 'libs-snapshot-local'
-            username = "exdeveloperro"
-            password = "AKqXzHDHpIztnzb4"
-        }
-
-    }
 }
 
