@@ -32,6 +32,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('org.springframework.cloud:spring-cloud-starter-contract-verifier')
+    compile group: 'org.springframework.boot', name: 'spring-boot-actuator', version: '1.5.9.RELEASE'
 
 }
 
