@@ -37,7 +37,5 @@ public class EmployeeController {
         employee.setName("ARUN");
         response.setMessage(employee.toString());
         return response;
-       /*//Yet to be implemented
-        return null;*/
     }
 }
